@@ -3,7 +3,6 @@ import {
   useMutation,
   useQueryClient,
   useInfiniteQuery,
-  QueryFunctionContext,
 } from "@tanstack/react-query"
 import { createPost, createUserAccount, deletePost, deleteSavedPost, getCurrentUser, getInfinitePosts, getPostById, getRecentPosts, getSavedPosts, getUserById, getUserPosts, getUsers, likePost, savePost, searchPosts, signInAccount, signOutAccount, updatePost, updateUser } from "../appwrite/api"
 import { INewPost, INewUser, IUpdatePost, IUpdateUser } from "@/types"
@@ -173,9 +172,10 @@ export const useGetPosts = () => {
       // Use the $id of the last document as the cursor.
       const lastId = lastPage.documents[lastPage.documents.length - 1].$id;
       return lastId;
-    }
-  })
-}
+    },
+    initialPageParam: 1,
+  });
+};
 
 export const useSearchPosts = (searchTerm: string) => {
   return useQuery({
@@ -195,7 +195,7 @@ export const useGetUsers = (limit?: number) => {
 export const useGetSavedPosts = (userId?: string) => {
   return useQuery({
     queryKey: [QUERY_KEYS.GET_RECENT_POSTS],
-    queryFn: () => getSavedPosts(userId),
+    queryFn: () => getSavedPosts(userId as string),
   });
 };
 
