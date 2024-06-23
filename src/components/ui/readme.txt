@@ -1,0 +1,2 @@
+This is the UI folder with "shadcn" components. 
+Shadcn is a tool to help you build your component library. We will be using shadcn ui components for some of our main UI. For exmaple, the shadcn: button, toast, etc. We can also style them as we want by using our custom tailwind.

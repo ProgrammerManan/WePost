@@ -1,0 +1,2 @@
+This is react query.
+We will be using react query for data fetching and most importantly for infinite scroll. As we are making a social media app we need an infinite scroll feature just like instagram.
