@@ -20,7 +20,7 @@ import { useNavigate } from "react-router-dom"
 import { useToast } from "../ui/use-toast"
 import { useUserContext } from "@/context/AuthContext"
 import { useCreatePost, useUpdatePost } from "@/lib/react-query/queriesAndMutations"
-import { Loader, Loader_Circle } from "../shared/Loader"
+import { Loader} from "../shared/Loader"
 
 type PostFormProps = {
   post?: Models.Document;

@@ -1,4 +1,4 @@
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import {useNavigate, useParams } from "react-router-dom";
 import PostForm from "@/components/forms/PostForm";
 import { useGetPostById, useGetCurrentUser } from "@/lib/react-query/queriesAndMutations";
 import { Loader_Circle } from "@/components/shared/Loader";

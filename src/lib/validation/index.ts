@@ -1,4 +1,3 @@
-import { Tag } from "lucide-react"
 import { z } from "zod"
 
 export const signUpValidation = z.object({

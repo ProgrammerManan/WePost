@@ -1,7 +1,6 @@
 import { INewPost, INewUser, IUpdatePost, IUpdateUser } from "@/types";
-import { account, appwriteConfig, avatars, client, databases, storage } from "./config";
-import { Avatars, ID, Query } from "appwrite";
-import exp from "constants";
+import { account, appwriteConfig, avatars,databases, storage } from "./config";
+import {ID, Query } from "appwrite";
 
 export async function createUserAccount(user: INewUser) {
     try {
@@ -406,7 +405,7 @@ export async function updatePost(post: IUpdatePost) {
     }
   }
   
-export async function getUsers(limit?: number) {
+export async function getUsers() {
     try {
       const users = await databases.listDocuments(
         appwriteConfig.databaseId,

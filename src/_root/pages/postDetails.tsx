@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import GridPostList from "@/components/shared/GridPostList";
 import PostStats from "@/components/shared/PostStats";
 import { Loader_Circle } from "@/components/shared/Loader";
-import { deleteSavedPost } from "@/lib/appwrite/api";
 
 const PostDetails = () => {
   const navigate = useNavigate();

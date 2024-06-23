@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useEffect} from 'react'
 import { Link , NavLink, useNavigate, useLocation} from 'react-router-dom'
 import { Button } from '../ui/button'
 import { useSignOutAccount } from '@/lib/react-query/queriesAndMutations'
 import { useUserContext } from '@/context/AuthContext'
 import { sidebarLinks } from '@/constant'
 import { INavLink } from '@/types'
-import { Skeleton } from '../ui/skeleton'
 import { Loader } from './Loader'
 
 const LeftSideBar = () => {
